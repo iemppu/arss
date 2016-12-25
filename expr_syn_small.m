@@ -87,6 +87,7 @@ else
     prob = make_rating_prob_bias(L, R, Omega, rank_reconstruct, sigma, rating_levels, bias); % <- you can choose another rank here
     prob.theta = theta;
     prob.rating_levels = rating_levels;
+    prob.delta = 1;
 
     % Reconstruct the observed matrix (y)
     X_observed = sparse(prob.Omega_i, prob.Omega_j, prob.data, prob.n1, prob.n2 );
